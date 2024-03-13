@@ -1,13 +1,14 @@
-## MoviePass
+## MoviePass Redefining Cinema Luxury
+# Description:
+MoviePass revolutionizes the movie ticket booking experience, offering unparalleled luxury and cutting-edge technology. Built on React.js Material UI, MoviePass presents a visually striking interface with a carefully crafted color palette and intuitive design. Elevate your cinematic journey with MoviePass and immerse yourself in a world of unparalleled comfort and convenience.
+
 ## Screenshots
 
 ![Home](https://github.com/VR22124/Movie_Pass/blob/main/Screenshot/Screenshot%202024-03-13%20230045.png)
 ![Ticket](https://github.com/VR22124/Movie_Pass/blob/main/Screenshot/Screenshot%202024-03-13%20230433.png)
 
-Title: MoviePass: Redefining Cinema Luxury
 
-Description:
-MoviePass revolutionizes the movie ticket booking experience, offering unparalleled luxury and cutting-edge technology. Built on React.js Material UI, MoviePass presents a visually striking interface with a carefully crafted color palette and intuitive design. Elevate your cinematic journey with MoviePass and immerse yourself in a world of unparalleled comfort and convenience.
+
 
 
 
