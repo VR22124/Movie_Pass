@@ -1,74 +1,55 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+Title: MoviePass: Redefining Cinema Luxury
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description:
+MoviePass revolutionizes the movie ticket booking experience, offering unparalleled luxury and cutting-edge technology. Built on React.js Material UI, MoviePass presents a visually striking interface with a carefully crafted color palette and intuitive design. Elevate your cinematic journey with MoviePass and immerse yourself in a world of unparalleled comfort and convenience.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Acknowledgements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - [MUI](https://mui.com/)
+ - [API (Login Auth)](https://jsonplaceholder.typicode.com/users)
+ - [Freepik](https://www.freepik.com/)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Appendix
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Freepik: Wallpaper sourced from Freepik.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Material-UI (MUI): Utilized Material-UI as a third-party library for the React.js components. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Google Images: Movie posters sourced from Google Images. While not a direct link, the posters were obtained from publicly available images on the internet.
 
-### `npm run eject`
+## Color Reference
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Color        | Hex                                                                |
+| ------------ | ------------------------------------------------------------------ |
+| Red          | ![#FF5656](https://via.placeholder.com/10/FF5656?text=+) #FF5656  |
+| Gray         | ![#808080](https://via.placeholder.com/10/808080?text=+) #808080  |
+| White        | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) #FFFFFF  |
+| Black        | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000  |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation and Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install my-project with npm
 
-## Learn More
+```bash
+  npm install
+  npm install react-router-dom @mui/material
+  npm install @material-ui/core @material-ui/styles 
+  npm install axios
+  npm install html2canvas
+  npm install @emotion/react @emotion/styled
+  npm install type-writer effect
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
+```
+    
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Home](https://github.com/VR22124/Movie_Pass/blob/main/Screenshot/Screenshot%202024-03-13%20230045.png)
+![Ticket](https://github.com/VR22124/Movie_Pass/blob/main/Screenshot/Screenshot%202024-03-13%20230433.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Movie_Pass
->>>>>>> 5e5c11efe299a780ef79e2840c0156c27c51b941
