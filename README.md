@@ -25,6 +25,7 @@ Install my-project with npm
   npm install html2canvas
   npm install @emotion/react @emotion/styled
   npm install type-writer effect
+  npm start
 
   
 ```
