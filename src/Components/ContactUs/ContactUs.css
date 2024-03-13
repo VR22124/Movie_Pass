@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  
+  background-size: cover;
+  height: 100vh;
+}
+.logon
+{
+  padding-left: 56%;
+  padding-top: 10%;
+}
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 550px;
+  background: rgba(187, 186, 186, 0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px gray;
+}
+
+.wrapper .title h1{
+  color: rgb(251, 86, 86);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-form{
+  display: flex;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+  width: 48%;
+}
+
+.input-fields .input,
+.msg textarea{
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid gray;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-size: medium;
+  font-weight: 600;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 212px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgb(251, 86, 86);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgb(251, 86, 86);
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgb(251, 86, 86);
+}
+
+.btn {
+    background: rgb(251, 86, 86);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #9d9999;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
+}

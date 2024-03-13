@@ -1,0 +1,400 @@
+body1 {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  align-items:center;
+  padding-top: 0px;
+  padding-left: 0%;
+  margin-top: -150px;
+}
+
+body1 .movie-container {
+  margin: 20px 0;
+}
+
+body1 .movie-container select {
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  
+  outline: none;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+}
+
+body1 .container {
+ 
+  height: 38.5rem;
+  display: flex;
+  margin-top: 0%;
+  padding-right: 100px;
+  align-items: center;
+  padding-top: -100px;
+  align-items: center;
+}
+.movie-screen img {
+  opacity: 90%;
+  padding-top: 60px;
+  border-radius: 10px;
+  width: 400px;
+  height :440px;
+}
+
+body1 .row-container {
+  padding: 10px;
+ 
+}
+
+body1 .seat {
+  background-color: lightgray;
+  height: 12px;
+  width: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  height: 30px;
+  width: 35px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+   color: rgb(82, 79, 79);
+  background: darkgrey;
+  border: 2px solid gray;
+  transition: all 0.2s ease;
+}
+
+
+body1 .seat.selected {
+  background-color: rgb(251, 86, 86);
+  background-color: rgb(251, 86, 86);
+}
+
+
+body1 .seat:nth-of-type(4) {
+  margin-right: 28px;
+}
+
+body1 .seat:nth-last-of-type(4) {
+  margin-left: 28px;
+}
+
+.showcase
+{
+  padding-top: 0%;
+}
+
+body1 .seat:not(.occupied):hover {
+  
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+body1 .showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(0.9);
+}
+
+body1 .showcase {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display:flex;
+  justify-content: space-between;
+}
+
+body1 .showcase li {
+  display: flex;
+  align-items: center;
+  margin: 0 0px;
+}
+
+body1 .showcase li small {
+  margin-left: 0px;
+}
+
+body1 .row {
+  display: flex;
+  padding-top: 1px;
+}
+
+body1 .screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+}
+
+body1 p.text {
+  margin: 5px 0;
+  color: gray;
+  font-weight: bold;
+  font-size: larger;
+}
+
+body1 p.text span {
+  color: rgb(251, 86, 86);
+}
+
+body1 .movie-screen {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body1 .movie-screen img {
+  max-width: 85%;
+  padding-top: -130px;
+}
+.foor
+{
+  padding-top: 180px;
+  padding-left: 20%;
+}
+.movie-screen
+{
+  padding-top: -10px;
+  margin-top: -90px;
+}
+.movie-screen h1
+{
+  color: gray;
+}
+
+body1 .subtitle {
+  position: relative;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 5px;
+  color: rgb(251, 86, 86);
+  font-size: 16px;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: px;
+}
+
+body1 .subtitle:before,
+body1 .subtitle:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 1px;
+  background: #213a69;
+}
+
+body1 .subtitle:before {
+  width: 80%;
+  top: 0;
+}
+
+body1 .subtitle:after {
+  width: 100%;
+  bottom: 0;
+}
+
+body1 .text {
+  font-size: 18px;
+}
+
+body1 #count,
+body1 #total {
+  font-size: 24px;
+  padding: 0 8px;
+}
+
+body1 .text-wrapper {
+  margin-top: 10px;
+  display: flex;
+}
+
+.container
+{
+  padding-top: 0px;
+}
+.tilt
+{
+    color: rgb(251, 86, 86);
+    font-weight: bold;
+    padding-left: 60px;
+   
+}
+
+@media (max-width: 576px) {
+  body1 {
+    padding-top: 30px;
+  }
+
+  .movie-container select {
+    font-size: 14px;
+  }
+
+  .seat {
+    height: 21px;
+    width: 23px;
+  }
+
+  .movie-screen img {
+    max-width: 92%;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  .seat:nth-of-type(2) {
+    margin-right: 12px;
+  }
+
+  .seat:nth-last-of-type(2) {
+    margin-left: 12px;
+  }
+
+  .movie-screen {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  #count,
+  #total {
+    font-size: 18px;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+body2 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+#button {
+  cursor: pointer !important;
+  top: 30%;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  width: 135px;
+  height: 50px;
+  border-radius: 60px;
+  background:  rgb(251, 86, 86);
+  line-height: 46px;
+  text-align: center;
+  color: ivory;
+  font-weight: 500;
+  overflow: hidden;
+  letter-spacing: 0.52px;
+}
+#w {
+  position: absolute;
+  text-align: center;
+  color: #e6e9ec;
+  font-weight: 900;
+  left: 38.5%;
+  transform: scale(1.5) translateY(100%);
+}
+.custom-button
+{
+  padding: 15px;
+  width: 115px;
+  height: 55px;
+  border: 1px solid gray;
+font-weight: bold;
+font-size: x-large;
+color: #fff;
+background-color: rgb(251, 86, 86);
+  text-align: left;
+}
+.custom-button {
+  border: 1px solid gray;
+  font-weight: bold;
+  background-color: rgb(251, 86, 86);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out; 
+  cursor: pointer; 
+  text-align:center;
+  align-items: center;
+}
+
+.custom-button:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.date-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.movie-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-dates {
+  display: flex;
+  width: 100%; /* Adjust as needed */
+}
+
+.bordered-date {
+  /* border: 1px solid black; */
+  padding: 5px;
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  padding: 5px;
+  
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+}
+
+
+
+.movie-running-date {
+  border: 2px solid rgba(256, 86, 86);
+  width: 89px;
+  height: 65px;
+  cursor: pointer; /* Add cursor pointer */
+  transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.movie-running-date:hover {
+  background-color: rgba(256, 86, 86, 0.1); /* Change background color on hover */
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: gray;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border: 2px solid rgba(256, 86, 86, 0.5);
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.button:hover .box {
+  display: block;
+}

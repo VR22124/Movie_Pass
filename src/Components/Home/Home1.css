@@ -1,0 +1,129 @@
+
+.tag
+{
+    padding-top: 10%;
+    padding-right: 15%;
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.typewriter
+{
+    color: rgb(251, 86, 86);
+    padding-right: 5%;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 6%;
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+}
+
+.brandd {
+    position: absolute;
+    padding-right:55%;
+    margin-top: -160px; 
+
+}
+.brandd img
+{
+ width: 500px;
+
+ height: 220px;
+ border-radius: 20px;
+ border-bottom: 2px solid lightgray;
+ border-right: 2px solid lightgray;
+ box-shadow: 8px 8px lightgray;
+}
+
+.tagg {
+    color: gray;
+    padding-top: 0%; 
+    text-align: right;
+    padding-right: 10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+    
+    
+}
+.tag {
+
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+    text-align: right;
+    
+}
+.taggg
+{
+    color: rgb(251, 86, 86);
+    padding-top: 2%;
+    padding-left: 40%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+}
+
+.tagggg
+{
+    color: rgb(251, 86, 86);
+    padding-top: 2%;
+    padding-left: 40%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+}
+.tech 
+{
+    padding-left: 40%;
+}
+.content {
+    color: gray;
+    padding-top: 0%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 130%;
+}
+.tech {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 300%;
+    color: rgb(251, 86, 86);
+    font-weight: bolder;
+    padding-left: 35%;
+}
+
+.next
+{
+    padding-left: 40%;
+    color: rgb(251, 86, 86);
+}
+
+.center {
+    text-align: center;
+    padding-left: 660px;
+}
+
+.box {
+    background-color: darkgray;
+    width: 120px;
+    padding-left: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.box button {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(251, 86, 86);
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}
+
+.box button:hover {
+    background-color: #ccc;
+}
+

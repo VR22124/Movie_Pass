@@ -1,0 +1,104 @@
+.form {
+    width: 380px;
+    height: 550px;
+    border-top: 3px solid rgb(251, 86, 86);
+    border-bottom: 3px solid rgb(251, 86, 86);
+    border-left: 3px solid rgb(251, 86, 86);
+    border-right: 3px solid rgb(251, 86, 86);
+    color: gray;
+    background: transparent;
+    border-radius: 10px;
+    padding: 40px 25px;
+    padding-top: -80px;
+}
+
+.form h1 {
+    width: 220px;
+    text-align: center;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color:gray;
+}
+
+.form img {
+    border-radius: 15px;
+    box-shadow: 5px 5px rgb(251, 86, 86);
+    height: 100px;
+    width: 160px;
+}
+
+.form input {
+    width: 100%;
+    height: 35px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color:rgb(251, 86, 86);
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+
+}
+
+.form input:focus {
+    outline: none;
+
+}
+
+::placeholder {
+    
+    font-family: Arial;
+
+
+}
+
+.btnn {
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: rgb(251, 86, 86);
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+
+.btnn a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.btnn :hover {
+    color: rgb(33, 26, 233);
+}
+
+.form.link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+.form.link a {
+    text-decoration: none;
+    color:gray;
+}
+
+.icons a i {
+    color: gray;
+    font-size: 32px;
+    padding: 7px;
+    padding-top: 5px;
+}
+
+.icons i:hover {
+    color: rgb(251, 86, 86);
+}
