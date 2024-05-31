@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import "./Booking.css";
 import mov1 from "../../Assets/image1.jpg";
 import mov2 from "../../Assets/image2.jpg";

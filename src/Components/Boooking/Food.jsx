@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Grid, Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core';
+
 import { useEffect } from 'react';
 import snacks1 from "../../Assets/snacks1.jpg";
 import snacks2 from "../../Assets/snacks2.jpg";
@@ -23,44 +23,11 @@ import des4 from "../../Assets/des4.jpg";
 import des5 from "../../Assets/des5.jpg";
 import des6 from "../../Assets/des6.jpg";
 
-const useStyles = makeStyles({
-    card: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      border: '2px solid transparent',
-      transition: 'border 0.3s ease-in-out',
-      marginBottom: '20px',
-      width: '230px', // Adjust card width
-      height: '350px', // Adjust card height
-    },
-    cardContent: {
-      flexGrow: 1,
-      textAlign: 'center',
-    },
-    cardMedia: {
-      height: 170,
-      width: 230,
-    },
-    price: {
-      fontWeight: 'bold',
-    },
-    sliderContainer: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      margin: '20px auto', // Adjust margins to center the slider
-      maxWidth: '1000px', // Adjust maximum width of slider container
-      overflowX: 'hidden',
-    },
-    sliderItem: {
-      padding: '0 10px', // Adjust padding to center the cards
-    },
-  });
+
 const ProductCards = () => {
     const location = useLocation();
   const navigate = useNavigate();
-    const classes = useStyles();
+    
     const [quantities, setQuantities] = useState({});
     const [cartItems, setCartItems] = useState([]);
     const sliderRef = useRef(null);
@@ -142,102 +109,183 @@ const ProductCards = () => {
     return (
       <>
           <Typography variant="h4" style={{ color: 'gray', fontWeight: 'bold', textAlign: 'center' }}>Movie Bites</Typography>
-          <div className={classes.sliderContainer} ref={sliderRef}>
-              {getProductsByCategory('Snacks').map(product => (
-                  <div className={classes.sliderItem} key={product.id}>
-                      <Card className={classes.card}>
-                          <CardMedia
-                              component="img"
-                              className={classes.cardMedia}
-                              image={product.imageUrl}
-                              alt={product.description}
-                          />
-                          <CardContent className={classes.cardContent}>
-                              <Typography gutterBottom variant="h5" component="div">
-                                  {product.title}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary">
-                                  {product.description}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary" className={classes.price}>
-                                  Price: {product.price}
-                              </Typography>
-                              <Box display="flex" alignItems="center">
-                                  <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
-                                  <Typography variant="body1">{quantities[product.id] || 0}</Typography>
-                                  <Button onClick={() => handleIncrement(product.id)}>+</Button>
-                                  <Button onClick={() => addToCart(product)}>Add</Button>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </div>
-              ))}
-          </div>
+          <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '20px auto', // Adjust margins to center the slider
+    maxWidth: '1000px', // Adjust maximum width of slider container
+    overflowX: 'hidden',
+}} ref={sliderRef}>
+    {getProductsByCategory('Snacks').map(product => (
+        <div style={{
+            padding: '0 10px', // Adjust padding to center the cards
+        }} key={product.id}>
+            <Card style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                border: '2px solid transparent',
+                transition: 'border 0.3s ease-in-out',
+                marginBottom: '20px',
+                width: '230px', // Adjust card width
+                height: '350px', // Adjust card height
+            }}>
+                <CardMedia
+                    component="img"
+                    style={{
+                        height: 170,
+                        width: 230,
+                    }}
+                    image={product.imageUrl}
+                    alt={product.description}
+                />
+                <CardContent style={{
+                    flexGrow: 1,
+                    textAlign: 'center',
+                }}>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {product.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {product.description}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{
+                        fontWeight: 'bold',
+                    }}>
+                        Price: {product.price}
+                    </Typography>
+                    <Box display="flex" alignItems="center">
+                        <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
+                        <Typography variant="body1">{quantities[product.id] || 0}</Typography>
+                        <Button onClick={() => handleIncrement(product.id)}>+</Button>
+                        <Button onClick={() => addToCart(product)}>Add</Button>
+                    </Box>
+                </CardContent>
+            </Card>
+        </div>
+    ))}
+</div>
 
-          <div className={classes.sliderContainer} ref={sliderRef}>
-              {getProductsByCategory('Desserts').map(product => (
-                  <div className={classes.sliderItem} key={product.id}>
-                      <Card className={classes.card}>
-                          <CardMedia
-                              component="img"
-                              className={classes.cardMedia}
-                              image={product.imageUrl}
-                              alt={product.description}
-                          />
-                          <CardContent className={classes.cardContent}>
-                              <Typography gutterBottom variant="h5" component="div">
-                                  {product.title}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary">
-                                  {product.description}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary" className={classes.price}>
-                                  Price: {product.price}
-                              </Typography>
-                              <Box display="flex" alignItems="center">
-                                  <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
-                                  <Typography variant="body1">{quantities[product.id] || 0}</Typography>
-                                  <Button onClick={() => handleIncrement(product.id)}>+</Button>
-                                  <Button onClick={() => addToCart(product)}>Add</Button>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </div>
-              ))}
-          </div>
+<div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '20px auto', // Adjust margins to center the slider
+    maxWidth: '1000px', // Adjust maximum width of slider container
+    overflowX: 'hidden',
+}} ref={sliderRef}>
+    {getProductsByCategory('Desserts').map(product => (
+        <div style={{
+            padding: '0 10px', // Adjust padding to center the cards
+        }} key={product.id}>
+            <Card style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                border: '2px solid transparent',
+                transition: 'border 0.3s ease-in-out',
+                marginBottom: '20px',
+                width: '230px', // Adjust card width
+                height: '350px', // Adjust card height
+            }}>
+                <CardMedia
+                    component="img"
+                    style={{
+                        height: 170,
+                        width: 230,
+                    }}
+                    image={product.imageUrl}
+                    alt={product.description}
+                />
+                <CardContent style={{
+                    flexGrow: 1,
+                    textAlign: 'center',
+                }}>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {product.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {product.description}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{
+                        fontWeight: 'bold',
+                    }}>
+                        Price: {product.price}
+                    </Typography>
+                    <Box display="flex" alignItems="center">
+                        <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
+                        <Typography variant="body1">{quantities[product.id] || 0}</Typography>
+                        <Button onClick={() => handleIncrement(product.id)}>+</Button>
+                        <Button onClick={() => addToCart(product)}>Add</Button>
+                    </Box>
+                </CardContent>
+            </Card>
+        </div>
+    ))}
+</div>
+
   
 
-          <div className={classes.sliderContainer} ref={sliderRef}>
-              {getProductsByCategory('Beverages').map(product => (
-                  <div className={classes.sliderItem} key={product.id}>
-                      <Card className={classes.card}>
-                          <CardMedia
-                              component="img"
-                              className={classes.cardMedia}
-                              image={product.imageUrl}
-                              alt={product.description}
-                          />
-                          <CardContent className={classes.cardContent}>
-                              <Typography gutterBottom variant="h5" component="div">
-                                  {product.title}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary">
-                                  {product.description}
-                              </Typography>
-                              <Typography variant="body2" color="text.secondary" className={classes.price}>
-                                  Price: {product.price}
-                              </Typography>
-                              <Box display="flex" alignItems="center">
-                                  <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
-                                  <Typography variant="body1">{quantities[product.id] || 0}</Typography>
-                                  <Button onClick={() => handleIncrement(product.id)}>+</Button>
-                                  <Button onClick={() => addToCart(product)}>Add</Button>
-                              </Box>
-                          </CardContent>
-                      </Card>
-                  </div>
-              ))}
-          </div>
+
+          
+          <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '20px auto', // Adjust margins to center the slider
+    maxWidth: '1000px', // Adjust maximum width of slider container
+    overflowX: 'hidden',
+}} ref={sliderRef}>
+    {getProductsByCategory('Beverages').map(product => (
+        <div style={{
+            padding: '0 10px', // Adjust padding to center the cards
+        }} key={product.id}>
+            <Card style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                border: '2px solid transparent',
+                transition: 'border 0.3s ease-in-out',
+                marginBottom: '20px',
+                width: '230px', // Adjust card width
+                height: '350px', // Adjust card height
+            }}>
+                <CardMedia
+                    component="img"
+                    style={{
+                        height: 170,
+                        width: 230,
+                    }}
+                    image={product.imageUrl}
+                    alt={product.description}
+                />
+                <CardContent style={{
+                    flexGrow: 1,
+                    textAlign: 'center',
+                }}>
+                    <Typography gutterBottom variant="h5" component="div">
+                        {product.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        {product.description}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" style={{
+                        fontWeight: 'bold',
+                    }}>
+                        Price: {product.price}
+                    </Typography>
+                    <Box display="flex" alignItems="center">
+                        <Button onClick={() => handleDecrement(product.id)} disabled={quantities[product.id] <= 0}>-</Button>
+                        <Typography variant="body1">{quantities[product.id] || 0}</Typography>
+                        <Button onClick={() => handleIncrement(product.id)}>+</Button>
+                        <Button onClick={() => addToCart(product)}>Add</Button>
+                    </Box>
+                </CardContent>
+            </Card>
+        </div>
+    ))}
+</div>
   
           <Typography variant="h4" style={{ color: 'gray', fontWeight: 'bold', textAlign: 'center' }}>Cart</Typography>
           <Grid container spacing={1}>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Card, CardMedia, Typography } from '@material-ui/core';
+import "./Style.css"
+
 import mov1 from "../../Assets/soon1.jpg";
 import mov2 from "../../Assets/soon2.jpg";
 import mov3 from "../../Assets/soon3.jpg";
@@ -66,62 +66,10 @@ import mov62 from "../../Assets/soon62.jpg";
 import mov63 from "../../Assets/soon63.jpg";
 import mov64 from "../../Assets/soon64.jpg";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: '100%',
-    margin: 'auto',
-    overflow: 'hidden',
-  },
-  sliderContainer: {
-    marginBottom: theme.spacing(4),
-  },
-  sliderHeading: {
-    textAlign: 'center',
-    margin: theme.spacing(2, 0),
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    color: '#333',
-  },
-  slider: {
-    display: 'flex',
-    overflowX: 'auto',
-    scrollSnapType: 'x mandatory',
-    padding: theme.spacing(2),
-    width: '100%',
-    maxWidth: '100%',
-  },
-  card: {
-    flex: '0 0 auto',
-    width: 220, 
-    height: 300, 
-    margin: theme.spacing(0, 1),
-    position: 'relative',
-    transition: 'transform 0.3s ease',
-    '&:hover': {
-      transform: 'scale(1.1)',
-    },
-  },
-  cardMedia: {
-    height: 300, 
-    width: 220, 
-    objectFit: 'cover', 
-    borderRadius: 15, 
-  },
-  cardContent: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    background: 'rgba(0, 0, 0, 0.7)',
-    color: 'white',
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    borderRadius: 15, 
-  },
-}));
+
 
 const ImageSlider = () => {
-  const classes = useStyles();
+  ;
 
   const genres = ['Horror', 'Action Thriller', 'Sci-Fi', 'Fantasy'];
   const images = [
@@ -143,31 +91,31 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className={classes.root}>
-      {genres.map((genre, index) => (
-        <div key={index} className={classes.sliderContainer}>
-          <Typography variant="h2" className={classes.sliderHeading}>
-            {genre}
-          </Typography>
-          <div className={classes.slider}>
-            {images[index].map((image, index) => (
-              <Paper key={index} className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={image}
-                  title={`Image ${index + 1}`}
-                />
-                <div className={classes.cardContent}>
-                  <Typography variant="body2" component="p">
-                    Release Date: {generateRandomDate()}
-                  </Typography>
-                </div>
-              </Paper>
-            ))}
-          </div>
+    <div className="root">
+    {genres.map((genre, index) => (
+      <div key={index} className="sliderContainer">
+        <h2 className="sliderHeading">
+          {genre}
+        </h2>
+        <div className="slider">
+          {images[index].map((image, index) => (
+            <div key={index} className="card">
+              <img
+                className="cardMedia"
+                src={image}
+                alt={`Image ${index + 1}`}
+              />
+              <div className="cardContent">
+                <p className="cardText">
+                  Release Date: {generateRandomDate()}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
+  </div>
   );
 };
 

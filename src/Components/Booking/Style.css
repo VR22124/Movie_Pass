@@ -1,0 +1,65 @@
+/* styles.css */
+
+.root {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .sliderContainer {
+    margin-bottom: 16px; /* Use whatever spacing you prefer */
+  }
+  
+  .sliderHeading {
+    text-align: center;
+    margin: 16px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 8px; /* Adjust padding as needed */
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 220px; 
+    height: 300px; 
+    margin: 0 4px; /* Adjust margin as needed */
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .cardMedia {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 15px; 
+  }
+  
+  .cardContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px;
+    text-align: center;
+    border-radius: 15px; 
+  }
+  
+  .cardText {
+    margin: 0;
+  }
+  

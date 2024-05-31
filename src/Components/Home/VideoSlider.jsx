@@ -1,40 +1,11 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Paper } from '@material-ui/core';
+import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: '100%', 
-    margin: 'auto',
-    overflow: 'hidden',
-  },
-  carousel: {
-    display: 'flex',
-    overflowX: 'auto',
-    scrollSnapType: 'x mandatory',
-    padding: theme.spacing(2),
-  },
-  paper: {
-    flex: '0 0 auto',
-    padding: theme.spacing(2),
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'transparent',
-    width: '560px', 
-    height: '315px', 
-    scrollSnapAlign: 'start',
-  },
-  iframeContainer: {
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-}));
+
+
+
 
 const VideoSlider = () => {
-  const classes = useStyles();
+
 
   const videoUrls = [
     'https://www.youtube.com/embed/Way9Dexny3w?si=-u3BGWwpLtxaTSHx',
@@ -46,11 +17,37 @@ const VideoSlider = () => {
   ];
 
   return (
-    <div className={classes.root}>
-      <div className={classes.carousel}>
+    <div style={{ 
+      maxWidth: '100%', 
+      margin: 'auto',
+      overflow: 'hidden',
+    }}>
+      <div style={{ 
+        display: 'flex',
+        overflowX: 'auto',
+        scrollSnapType: 'x mandatory',
+        padding: '16px', // Assuming theme.spacing(2) equals 16px
+      }}>
         {videoUrls.map((url, index) => (
-          <Paper key={index} className={classes.paper}>
-            <div className={classes.iframeContainer}>
+          <div key={index} style={{ 
+            flex: '0 0 auto',
+            padding: '16px', // Assuming theme.spacing(2) equals 16px
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.05)', // Adjust background color as needed
+            width: '560px', 
+            height: '315px', 
+            scrollSnapAlign: 'start',
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)', // Add shadow for depth effect
+            borderRadius: '8px', // Optional: add rounded corners
+          }}>
+            <div style={{ 
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
               <iframe
                 title={`Video ${index + 1}`}
                 src={url}
@@ -61,7 +58,7 @@ const VideoSlider = () => {
                 allowFullScreen
               ></iframe>
             </div>
-          </Paper>
+          </div>
         ))}
       </div>
     </div>

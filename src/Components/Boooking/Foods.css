@@ -1,0 +1,56 @@
+.sliderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    overflow-x: hidden;
+  }
+  
+  .sliderItem {
+    padding: 0 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
+    margin-bottom: 20px;
+    width: 230px;
+    height: 350px;
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .cardMedia {
+    height: 170px;
+    width: 230px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  
+  .quantityControls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantityControls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .quantityControls span {
+    margin: 0 5px;
+  }
+  
